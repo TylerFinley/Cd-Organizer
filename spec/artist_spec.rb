@@ -20,6 +20,7 @@ describe(Artist) do
             expect(test_artist.id()).to(eq(1))
         end
     end
+
     describe("#albums") do
         it('returns an empty array for the albums') do
             test_artist = Artist.new("Justin Bieber")
@@ -27,4 +28,10 @@ describe(Artist) do
         end
     end
 
+    describe('#save') do
+        it("adds an artist to the array of saved artists") do
+            test_artist = Artist.new("Justin Bieber")
+            expect(test_artist.save()).to(eq([test_artist]))
+        end
+    end
 end

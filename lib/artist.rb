@@ -14,7 +14,12 @@ class Artist
     define_method(:id) do
         @id
     end
+
     define_method(:albums) do
         @albums
+    end
+
+    define_method(:save) do
+        @@all_artists.push(self)
     end
 end
