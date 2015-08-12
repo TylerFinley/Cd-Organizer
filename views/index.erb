@@ -1,0 +1,25 @@
+<h1> My Cd's </h1>
+
+<p> Add a CD </p>
+
+<form action="/new_album" method="post">
+  <label for="artist">Artist</label>
+  <input id="artist" name="artist" type="text">
+  <label for="album">Album</label>
+  <input id="album" name="album" type="text">
+  <label for="year">Year</label>
+  <input id="year" name="year" type="text">
+  <button type="submit">Add album</button>
+</form>
+
+
+
+
+<ul>
+  <% @all_albums.each() do |album| %>
+  <li><%= album.artist %>, <%= album.title %>, <%= album.year %></li>
+  <% end %>
+</ul>
+<form action="/clear">
+    <button type="submit">Clear</button>
+  </form>
